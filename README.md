@@ -24,3 +24,13 @@ A continuación se muestra una lista de elementos:
 ## Sección 3: Gráfico de Barras (Ejemplo Textual)
 
 A continuación se presenta un gráfico de barras textual que representa los datos de una encuesta:
+Popularidad de Frutas
+
+Manzanas:   ██████████  10
+Naranjas:   ████████    8
+Plátanos:   ██████████████  12
+Fresas:     ██████      6
+
+## Conclusión
+
+Este es un ejemplo básico de cómo usar Markdown para crear un documento estructurado. Puedes utilizar múltiples secciones, listas, tablas y representaciones gráficas simples.
