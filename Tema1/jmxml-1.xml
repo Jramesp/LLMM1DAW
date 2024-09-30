@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Library>
+
+  <book category="Drama">
+    <title lang="en">"Nadie tiene que saberlo excepto tu"</title>
+    <author>Madame G. Rouge</author>
+    <year>2017</year>
+  </book>
+
+  <book category="children">
+    <title lang="en">"la grieta del silencio"</title>
+    <author>Javier Castillo</author>
+    <year>2008</year>
+  </book>
+</Library>
