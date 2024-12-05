@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web4U - Aprende HTML, SVG y CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .languages {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 2rem 1rem;
+        }
+        .languages article {
+            text-align: center;
+            max-width: 200px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .languages article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .languages img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .languages h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .languages a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" title="Ir al inicio" class="logo">JM</a>
+        
+    <div class="language-switcher">
+        <a href="index.html" title="Español">
+            <img src="images/flag.png" alt="Español">
+        </a>
+        <a href="index-en.html" title="English">
+            <img src="images/united-kingdom.png" alt="English">
+        </a> 
+        </div>
+
+        <h1>Web4U: Aprende HTML, SVG y CSS</h1>
+        <nav>
+            <a href="html.html" title="Explorar HTML">HTML</a>
+            <a href="svg.html" title="Explorar SVG">SVG</a>
+            <a href="css.html" title="Explorar CSS">CSS</a>
+        </nav>
+    </header>
+    <main>
+        <section class="languages">
+            <article>
+                <a href="html.html" title="Explorar HTML">
+                    <img src="images/html-logo.png" alt="HTML logo">
+                    <h2>HTML</h2>
+                </a>
+            </article>
+            <article>
+                <a href="svg.html" title="Explorar SVG">
+                    <img src="images/svg-logo.png" alt="SVG logo">
+                    <h2>SVG</h2>
+                </a>
+            </article>
+            <article>
+                <a href="css.html" title="Explorar CSS">
+                    <img src="images/css-logo.png" alt="CSS logo">
+                    <h2>CSS</h2>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; JM Web4U. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
