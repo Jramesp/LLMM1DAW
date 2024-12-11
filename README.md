@@ -12,7 +12,7 @@ Ejercicio  | Descripción
 
 Ejercicio  | Descripción
 -----------|--------------
- [Ejercicio 1](/Tema1/Ejercicio 1.html)         | Un documento html que incluye encabezados, párrafos y enlaces
+ [Ejercicio 1](/Tema1/Ejercicio1.html)         | Un documento html que incluye encabezados, párrafos y enlaces
  [Ejercicio 2](/Tema1/Ejercicio2.html)         | Un documento html que incluye distintos encabezados
  [Ejercicio 3](/Tema1/Ejercicio3.html)         | Un documento html que incluye distintos encabezados, y etiquetas strongs
  [Ejercicio 4](/Tema1/Ejercicio4.html)         | Una página con un pre y encabezado
