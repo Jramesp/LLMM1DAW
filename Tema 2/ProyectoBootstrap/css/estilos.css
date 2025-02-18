@@ -1,0 +1,59 @@
+:root {
+  --primary-color: #f78fb3;         
+  --secondary-color: #3dc1d3;       
+  --text-color: #ffffff;            
+  --background-gradient: linear-gradient(
+    120deg, 
+    #f78fb3, 
+    #3dc1d3
+  );
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-gradient); 
+  color: #fcfbfd; 
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+.navbar-dark {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: var(--text-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: #f000d0;
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #d704f3;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.card {
+  border: none;
+  border-radius:5px;
+}
