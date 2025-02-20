@@ -5,7 +5,7 @@ Ejercicio  | Descripción
 -----------|--------------
 [Enlace 1](http://docs.google.com/document/d/18Ru8RTDNnfByqD1XmgBmsbB0heMsepe_rTok2kAbi34/edit?usp=sharing_blank)  | Enunciado Actividad
 <a href="http://mundodelasmascotas.infinityfreeapp.com/?i=1" target="_blank">Enlace 2</a> |Enlace a Bootstrap SIN certificado SSL
-[Ejenrcicio 1](/Tema2/ProyectoBootstrap)         | Un documento html que incluye encabezados, párrafos y enlaces
+[Ejenrcicio 1](/Tema2/ProyectoBootstrap/)         | Un documento html que incluye encabezados, párrafos y enlaces
 
 
 ## Tema 2 - CSS
