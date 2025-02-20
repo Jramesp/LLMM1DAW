@@ -3,7 +3,7 @@
 Ejercicio  | Descripción
 -----------|--------------
 [Enlace 1](http://docs.google.com/document/d/18Ru8RTDNnfByqD1XmgBmsbB0heMsepe_rTok2kAbi34/edit?usp=sharing_blank)  | Enunciado Actividad
-<a href="[mundodelasmascotas.infinityfreeapp.com](http://mundodelasmascotas.infinityfreeapp.com/?i=1)" target="_blank">Enlace 2</a> |Enlace a Bootstrap SIN certificado SSL
+<a href="(http://mundodelasmascotas.infinityfreeapp.com/?i=1)" target="_blank">Enlace 2</a> |Enlace a Bootstrap SIN certificado SSL
 [Enlace 3](https://github.com/Jramesp/LLMM1DAW/tree/bee57446434441f048a2fd664e23ebe3c5d2843c/Tema1/Paginaweb) | Archivos de la web
 
 
