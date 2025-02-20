@@ -1,18 +1,18 @@
 # Proyecto Final 2EVA
+# Proyecto Final 2EVA
 ### Práctica Bootstrap
 Ejercicio  | Descripción
 -----------|--------------
 [Enlace 1](http://docs.google.com/document/d/18Ru8RTDNnfByqD1XmgBmsbB0heMsepe_rTok2kAbi34/edit?usp=sharing_blank)  | Enunciado Actividad
 <a href="http://mundodelasmascotas.infinityfreeapp.com/?i=1" target="_blank">Enlace 2</a> |Enlace a Bootstrap SIN certificado SSL
-[Enlace 3](Tema 2/ProyectoBootstrap) | Archivos de la web
-
+[Ejenrcicio 1](/Tema2/ProyectoBootstrap)         | Un documento html que incluye encabezados, párrafos y enlaces
 
 
 ## Tema 2 - CSS
 
 Ejercicio  | Descripción
------------|--------------
- [Ejercicio 1](/Tema1/Ejercicio1.html)         | Un documento html que incluye encabezados, párrafos y enlaces
+ [Ejenrcicio 1](/Tema1/Ejercicio1.html)         | Un documento html que incluye encabezados, párrafos y enlaces
+ [Ejenrcicio 1](/Tema1/Ejercicio1.html)         | Un documento html que incluye encabezados, párrafos y enlaces
  [Ejercicio 2](/Tema1/Ejercicio2.html)         | Un documento html que incluye distintos encabezados
  [Ejercicio 3](/Tema1/Ejercicio3.html)         | Un documento html que incluye distintos encabezados, y etiquetas strongs
  [Ejercicio 4](/Tema1/Ejercicio4.html)         | Una página con un pre y encabezado
