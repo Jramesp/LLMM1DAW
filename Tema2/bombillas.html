@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Juego de las Luces 3×3</title>
+  <style>
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 80px); 
+      grid-gap: 10px;                        
+      justify-content: center;               
+      margin-top: 50px;                      
+    }
+    .cell {
+      width: 80px;
+      height: 80px;
+      background-color: black; 
+      border: 2px solid #333;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .on {
+      background-color: yellow;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    #message {
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Juego de las Luces 3×3</h1>
+  <p>Objetivo: Deja todas las luces apagadas. Al hacer clic en una celda, se alterna esa luz y sus adyacentes.</p>
+
+  <div class="grid" id="board"></div>
+
+
+  <p id="message"></p>
+
+  <script>
+
+    let board = [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0]
+    ];
+
+   
+    const boardElement = document.getElementById('board');
+    
+    const messageElement = document.getElementById('message');
+
+    
+    for (let row = 0; row < 3; row++) {
+      for (let col = 0; col < 3; col++) {
+
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        cell.dataset.row = row;
+        cell.dataset.col = col;
+    
+        cell.addEventListener('click', onCellClick);
+        boardElement.appendChild(cell);
+      }
+    }
+
+    function onCellClick(e) {
+
+      const row = parseInt(e.target.dataset.row, 10);
+      const col = parseInt(e.target.dataset.col, 10);
+      
+    
+      toggleLight(row, col);
+      checkWin();
+    }
+
+
+    function toggleLight(r, c) {
+
+      board[r][c] = board[r][c] === 0 ? 1 : 0;
+
+      if (r > 0) {
+        board[r - 1][c] = board[r - 1][c] === 0 ? 1 : 0;
+      }
+    
+      if (r < 2) {
+        board[r + 1][c] = board[r + 1][c] === 0 ? 1 : 0;
+      }
+     
+      if (c > 0) {
+        board[r][c - 1] = board[r][c - 1] === 0 ? 1 : 0;
+      }
+    
+      if (c < 2) {
+        board[r][c + 1] = board[r][c + 1] === 0 ? 1 : 0;
+      }
+
+    
+      renderBoard();
+    }
+
+   
+    function renderBoard() {
+     
+      for (let row = 0; row < 3; row++) {
+        for (let col = 0; col < 3; col++) {
+
+          const cellIndex = row * 3 + col;
+          const cellElement = boardElement.children[cellIndex];
+
+          cellElement.classList.remove('on');
+
+          if (board[row][col] === 1) {
+            cellElement.classList.add('on');
+          }
+        }
+      }
+    }
+
+    function checkWin() {
+
+      const allOff = board.every(fila => fila.every(luz => luz === 0));
+      if (allOff) {
+        messageElement.textContent = "¡Felicidades! Has apagado todas las luces.";
+        disableBoard();
+      }
+    }
+    function disableBoard() {
+      for (let i = 0; i < boardElement.children.length; i++) {
+        boardElement.children[i].removeEventListener('click', onCellClick);
+      }
+    }
+    renderBoard();
+  </script>
+</body>
+</html>
