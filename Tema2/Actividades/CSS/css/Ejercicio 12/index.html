@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 12</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+header, nav, section, footer {
+padding: 20px;
+}
+header {
+background-color: #f4f4f4;
+}
+nav {
+background-color: #333;
+}
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+}
+nav li {
+float: left;
+}
+nav a {
+display: block;
+padding: 14px 20px;
+color: #fff;
+text-decoration: none;
+}
+nav a:hover {
+background-color: #555;
+}
+.main {
+display: flex;
+flex-wrap: wrap;
+}
+.column {
+flex: 1;
+margin: 10px;
+background-color: #eee;
+padding: 10px;
+}
+footer {
+text-align: center;
+background-color: #f4f4f4;
+}
+@media screen and (max-width: 600px) {
+nav li {
+float: none;
+}
+.column {
+margin: 0 0 10px 0;
+}
+.main {
+flex-direction: column;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Ejercicio 12</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Sobre mí</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+
+<section class="main">
+<div class="column">
+<h2>Columna 1</h2>
+<p>Texto de ejemplo</p>
+</div>
+<div class="column">
+<h2>Columna 2</h2>
+<p>Texto de ejemplo</p>
+</div>
+</section>
+
+<footer>
+<p>Pie de página</p>
+</footer>
+
+</body>
+</html>

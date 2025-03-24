@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de Colores</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #555;
+      color: #fff;
+    }
+    tfoot td {
+      background-color: #eee;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2>Tabla de Colores</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Red</th>
+        <th>Green</th>
+        <th>Blue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Light Sand</td>
+        <td>254</td>
+        <td>255</td>
+        <td>239</td>
+      </tr>
+      <tr>
+        <td>Beige</td>
+        <td>245</td>
+        <td>245</td>
+        <td>220</td>
+      </tr>
+      <tr>
+        <td>Chocolate</td>
+        <td>210</td>
+        <td>105</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Gray</td>
+        <td>190</td>
+        <td>190</td>
+        <td>190</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">
+          Use like this: <code>color: rgb(RED, GREEN, BLUE);</code>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
