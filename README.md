@@ -29,18 +29,15 @@ Ejercicio  | Descripción
 
 Ejercicio  | Descripción
 -----------|--------------
- [Ejercicio 1](Tema2/Actividades/JavaScript y html DOM/Ejercicio1)         | Ejercicio básico
- [Ejercicio 2](Tema2/Actividades/JavaScript y html DOM/Ejercicio2)         | Mostrar mensaje
- [Ejercicio 3](/Tema3/Ejercicio3.html)           | Mostrar imágenes
- [Ejercicio 4](/Tema3/Ejercicio4.html)           | Trabajando con variables
- [Ejercicio 5](/Tema3/Ejercicio5.html)           | Cambiamos imagen estilo y texto
- [Ejercicio 6](/Tema3/Ejercicio6.html)           | Copia la imagen
- [Ejercicio 7](/Tema3/Ejercicio7/Ejercicio7.html)         | Slider
- [Ejercicio 8](/Tema3/Ejercicio8.html)           | Calculadora
- [Ejercicio 9](/Tema3/Ejercicio9.html)           | Conversor de unidades
- [Ejercicio 10](/Tema3/Ejercicio10.html)         | Juego de memoria
- [Ejercicio 11](/Tema3/Ejercicio11.html)         | Validación de formulario
- [Ejercicio 12](/Tema3/Ejercicio12.html)         | Galería de imágenes dinámica
+ [Ejercicio 1](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio1)         | Ejercicio básico
+ [Ejercicio 2](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio2))         | Mostrar mensaje
+ [Ejercicio 3]((https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio3))           | Mostrar imágenes
+ [Ejercicio 4](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio4))           | Trabajando con variables
+ [Ejercicio 5](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio5)           | Cambiamos imagen estilo y texto
+ [Ejercicio 6](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio6)           | Copia la imagen
+ [Ejercicio 7](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio7)         | Slider
+ [Ejercicio 8](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio8)           | Calculadora
+ [Ejercicio 9](https://github.com/Jramesp/LLMM1DAW/tree/339e0836cfd19d5b68cff9a289b1f504485ed119/Tema2/Actividades/JavaScript%20y%20html%20DOM/Ejercicio9)           | Conversor de unidades
 
 
 
