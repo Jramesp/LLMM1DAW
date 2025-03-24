@@ -1,0 +1,58 @@
+
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    font-size: 16px;               
+    color: black;                  
+    background-color: #f9f9f9;     
+  }
+  
+ 
+  .cv-container {
+    width: 600px;         
+    margin: 20px auto;    
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+ 
+  h1 {
+    font-family: Georgia, serif;
+    color: blue;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1.6em; 
+    word-spacing: 2em;     
+    text-align: center;
+    margin: 0;      
+    padding: 20px 0;
+  }
+  
+  
+  h2 {
+    font-family: Georgia, serif;
+    color: darkred;
+    font-size: 18px;
+    letter-spacing: 1.4em;
+    margin-top: 30px; 
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+  }
+  
+ 
+  section p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+
+  .years {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px; 
+  }
+  
+ 
