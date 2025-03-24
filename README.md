@@ -18,8 +18,8 @@ Ejercicio  | Descripción
  [Ejercicio 4](Tema2/Actividades/css/Ejercicio4)         | lista en horizontal
  [Ejercicio 5](Tema2/Actividades/css/Ejercicio5)         | Crear una tabla
  [Ejercicio 6](Tema2/Actividades/css/Ejercicio6)         | Tabla con propiedades
- [Ejercicio 7]|(Tema2/Actividades/css/Ejercicio7)        | Usan la propiedad Float: left
- [Ejercicio 8]|(Tema2/Actividades/css/Ejercicio8)        | Usan la propiedad position: absolute y el z-index
+ [Ejercicio 7](Tema2/Actividades/css/Ejercicio7)         | Usan la propiedad Float: left
+ [Ejercicio 8](Tema2/Actividades/css/Ejercicio8)         | Usan la propiedad position: absolute y el z-index
  [Ejercicio 9]| Lo mismo usan position absolute y el z-index
  [Ejercicio 10](/Tema2/Ejercicio10.html) | Usando la propiedad flex
  [Ejercicio 11](/Tema2/Ejercicio11) | Galería de imagenes
