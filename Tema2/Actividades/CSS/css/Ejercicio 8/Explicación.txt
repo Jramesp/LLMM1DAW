@@ -1,1 +1,0 @@
-Usan la propiedad position: absolute y el z-index.

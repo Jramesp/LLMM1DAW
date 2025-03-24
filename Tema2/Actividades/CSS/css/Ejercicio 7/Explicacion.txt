@@ -1,5 +1,0 @@
-- se usa float: left; o float: right; 
-- tambien Para evitar que un contenedor “colapse” cuando sus hijos están flotados, 
-se suele utilizar overflow: auto; o un clearfix.
-- Se añaden márgenes o paddings para separar los bloques flotados y 
-que no se peguen entre sí.
