@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var imagenes=["imagen1.jpg","imagen2.jpg","imagen3.jpg"]
+var i=0
+function anterior() {
+i--
+if(i<0){i=imagenes.length-1}
+document.getElementById("slider").src=imagenes[i]
+}
+function siguiente() {
+i++
+if(i>=imagenes.length){i=0}
+document.getElementById("slider").src=imagenes[i]
+}
+</script>
+</head>
+<body>
+<h1>Slider</h1>
+<img id="slider" src="imagen1.jpg" width="300">
+<br>
+<button onclick="anterior()">Anterior</button>
+<button onclick="siguiente()">Siguiente</button>
+</body>
+</html>

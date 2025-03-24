@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function fuente1() {
+document.getElementById("texto").style.fontFamily="Arial"
+}
+function fuente2() {
+document.getElementById("texto").style.fontFamily="Times New Roman"
+}
+function fuente3() {
+document.getElementById("texto").style.fontFamily="Courier"
+}
+function imagen1() {
+document.getElementById("img").src="coche1.jpg"
+}
+function imagen2() {
+document.getElementById("img").src="coche2.jpg"
+}
+function imagen3() {
+document.getElementById("img").src="coche3.jpg"
+}
+function mensaje1() {
+document.getElementById("mensajes").innerHTML="Mensaje 1"
+}
+function mensaje2() {
+document.getElementById("mensajes").innerHTML="Mensaje 2"
+}
+function mensaje3() {
+document.getElementById("mensajes").innerHTML="Mensaje 3"
+}
+</script>
+</head>
+<body>
+<p id="texto">Texto a modificar</p>
+<button onclick="fuente1()">Fuente 1</button>
+<button onclick="fuente2()">Fuente 2</button>
+<button onclick="fuente3()">Fuente 3</button>
+<br><br>
+<img id="img" src="img1.jpg" style="width:200px">
+<br>
+<button onclick="imagen1()">Imagen 1</button>
+<button onclick="imagen2()">Imagen 2</button>
+<button onclick="imagen3()">Imagen 3</button>
+<br><br>
+<div id="mensajes"></div>
+<button onclick="mensaje1()">Mensaje 1</button>
+<button onclick="mensaje2()">Mensaje 2</button>
+<button onclick="mensaje3()">Mensaje 3</button>
+</body>
+</html>

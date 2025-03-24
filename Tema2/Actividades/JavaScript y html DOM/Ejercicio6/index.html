@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var citas=[
+"Dios, sálvame de mis amigos. Puedo protegerme de mis enemigos.",
+"Un crítico es alguien que nunca va a la batalla, pero que después sale disparando a los heridos.",
+"No llores porque terminó, sonríe porque sucedió."
+]
+function nuevaCita() {
+var r=Math.floor(Math.random()*citas.length)
+document.getElementById("frase").innerHTML=citas[r]
+}
+</script>
+</head>
+<body>
+<h1>Random Quotes</h1>
+<p id="frase"></p>
+<button onclick="nuevaCita()">Nueva cita</button>
+</body>
+</html>

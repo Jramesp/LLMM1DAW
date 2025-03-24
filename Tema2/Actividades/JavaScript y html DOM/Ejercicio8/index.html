@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function insertValue(val) {
+document.getElementById("display").value+=val
+}
+function clearDisplay() {
+document.getElementById("display").value=""
+}
+function calculate() {
+var x=document.getElementById("display").value
+document.getElementById("display").value=eval(x)
+}
+</script>
+</head>
+<body>
+<input type="text" id="display">
+<br>
+<button onclick="insertValue('7')">7</button>
+<button onclick="insertValue('8')">8</button>
+<button onclick="insertValue('9')">9</button>
+<button onclick="insertValue('/')">/</button>
+<br>
+<button onclick="insertValue('4')">4</button>
+<button onclick="insertValue('5')">5</button>
+<button onclick="insertValue('6')">6</button>
+<button onclick="insertValue('*')">*</button>
+<br>
+<button onclick="insertValue('1')">1</button>
+<button onclick="insertValue('2')">2</button>
+<button onclick="insertValue('3')">3</button>
+<button onclick="insertValue('-')">-</button>
+<br>
+<button onclick="insertValue('0')">0</button>
+<button onclick="insertValue('.')">.</button>
+<button onclick="calculate()">=</button>
+<button onclick="insertValue('+')">+</button>
+<br>
+<button onclick="clearDisplay()">C</button>
+</body>
+</html>

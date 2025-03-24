@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link id="estilo" rel="stylesheet" href="estilo1.css">
+<script>
+function cambiaCoche(nombre) {
+document.getElementById("miImagen").src=nombre
+}
+function cambiaSpiderman(nombre) {
+document.getElementById("miSpiderman").src=nombre
+}
+function cambiarEstilo(fichero) {
+document.getElementById("estilo").href=fichero
+}
+</script>
+</head>
+<body>
+<h2>Imágenes de coches</h2>
+<img id="miImagen" src="imgcoches/coche1.jpg" style="height:300px">
+<br>
+<button onclick="cambiaCoche('imgcoches/coche1.jpg')">Coche 1</button>
+<button onclick="cambiaCoche('imgcoches/coche2.jpg')">Coche 2</button>
+<button onclick="cambiaCoche('imgcoches/coche3.jpg')">Coche 3</button>
+<button onclick="cambiaCoche('imgcoches/coche4.jpg')">Coche 4</button>
+<button onclick="cambiaCoche('imgcoches/coche5.jpg')">Coche 5</button>
+<button onclick="cambiaCoche('imgcoches/coche6.jpg')">Coche 6</button>
+<br>
+<label for="selectCoche">Selecciona un coche:</label>
+<select id="selectCoche" onchange="cambiaCoche(this.value)">
+<option value="imgcoches/coche1.jpg">Coche 1</option>
+<option value="imgcoches/coche2.jpg">Coche 2</option>
+<option value="imgcoches/coche3.jpg">Coche 3</option>
+<option value="imgcoches/coche4.jpg">Coche 4</option>
+<option value="imgcoches/coche5.jpg">Coche 5</option>
+<option value="imgcoches/coche6.jpg">Coche 6</option>
+</select>
+
+<h2>Imágenes de Spiderman</h2>
+<img id="miSpiderman" src="imgs/spiderman1.gif" style="height:300px">
+<br>
+<button onclick="cambiaSpiderman('imgs/spiderman1.gif')">Spiderman 1</button>
+<button onclick="cambiaSpiderman('imgs/spiderman2.jpg')">Spiderman 2</button>
+<button onclick="cambiaSpiderman('imgs/spiderman3.jpg')">Spiderman 3</button>
+<button onclick="cambiaSpiderman('imgs/spiderman4.jpg')">Spiderman 4</button>
+<button onclick="cambiaSpiderman('imgs/spiderman5.jpg')">Spiderman 5</button>
+<br>
+<label for="selectSpiderman">Selecciona un Spiderman:</label>
+<select id="selectSpiderman" onchange="cambiaSpiderman(this.value)">
+<option value="imgs/spiderman1.gif">Spiderman 1</option>
+<option value="imgs/spiderman2.jpg">Spiderman 2</option>
+<option value="imgs/spiderman3.jpg">Spiderman 3</option>
+<option value="imgs/spiderman4.jpg">Spiderman 4</option>
+<option value="imgs/spiderman5.jpg">Spiderman 5</option>
+</select>
+<br><br>
+<button onclick="cambiarEstilo('estilo1.css')">Estilo 1</button>
+<button onclick="cambiarEstilo('estilo2.css')">Estilo 2</button>
+</body>
+</html>
