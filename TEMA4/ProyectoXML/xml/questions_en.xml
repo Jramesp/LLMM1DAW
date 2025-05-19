@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test SYSTEM "../dtd/test.dtd">
+<test>
+  <question id="1">
+    <wording>What was Edson Arantes do Nascimento's nickname?</wording>
+    <choices>
+      <choice correct="yes">O Rei</choice>
+      <choice>The King</choice>
+      <choice>The Magician</choice>
+      <choice>The Panther</choice>
+    </choices>
+  </question>
+  <question id="2">
+    <wording>In which year was Diego Maradona born?</wording>
+    <choices>
+      <choice>1962</choice>
+      <choice correct="yes">1960</choice>
+      <choice>1958</choice>
+      <choice>1964</choice>
+    </choices>
+  </question>
+  <question id="3">
+    <wording>Which country did Johan Cruyff represent?</wording>
+    <choices>
+      <choice correct="yes">Netherlands</choice>
+      <choice>Germany</choice>
+      <choice>Belgium</choice>
+      <choice>France</choice>
+    </choices>
+  </question>
+  <question id="4">
+    <wording>What was the name of the Soviet goalkeeper nicknamed "Black Spider"?</wording>
+    <choices>
+      <choice correct="yes">Lev Yashin</choice>
+      <choice>Lev Ivanov</choice>
+      <choice>Igor Belanov</choice>
+      <choice>Anatoly Demyanenko</choice>
+    </choices>
+  </question>
+  <question id="5">
+    <wording>Which Brazilian player was known as Garrincha?</wording>
+    <choices>
+      <choice correct="yes">Manuel Francisco dos Santos</choice>
+      <choice>Edmundo</choice>
+      <choice>Rivelino</choice>
+      <choice>Zico</choice>
+    </choices>
+  </question>
+  <question id="6">
+    <wording>What was Alfredo Di Stéfano's nickname?</wording>
+    <choices>
+      <choice>El Toro</choice>
+      <choice correct="yes">La Saeta Rubia</choice>
+      <choice>The Arrow</choice>
+      <choice>The Cannon</choice>
+    </choices>
+  </question>
+  <question id="7">
+    <wording>What nationality was Franz Beckenbauer?</wording>
+    <choices>
+      <choice correct="yes">German</choice>
+      <choice>Austrian</choice>
+      <choice>Swiss</choice>
+      <choice>Belgian</choice>
+    </choices>
+  </question>
+  <question id="8">
+    <wording>Which English player was nicknamed "The Fifth Beatle"?</wording>
+    <choices>
+      <choice correct="yes">George Best</choice>
+      <choice>Bobby Charlton</choice>
+      <choice>Stanley Matthews</choice>
+      <choice>Kevin Keegan</choice>
+    </choices>
+  </question>
+  <question id="9">
+    <wording>At which Italian club did Giuseppe Meazza spend most of his career?</wording>
+    <choices>
+      <choice correct="yes">Inter Milan</choice>
+      <choice>AC Milan</choice>
+      <choice>Juventus</choice>
+      <choice>Roma</choice>
+    </choices>
+  </question>
+  <question id="10">
+    <wording>What was Ferenc Puskás's nickname?</wording>
+    <choices>
+      <choice correct="yes">Pancho</choice>
+      <choice>The Magician</choice>
+      <choice>The Fox</choice>
+      <choice>The Panther</choice>
+    </choices>
+  </question>
+  <question id="11">
+    <wording>Which country did Eusebio represent?</wording>
+    <choices>
+      <choice correct="yes">Portugal</choice>
+      <choice>Brazil</choice>
+      <choice>Argentina</choice>
+      <choice>Spain</choice>
+    </choices>
+  </question>
+  <question id="12">
+    <wording>In which position did Michel Platini play?</wording>
+    <choices>
+      <choice>Defender</choice>
+      <choice>Forward</choice>
+      <choice correct="yes">Attacking Midfielder</choice>
+      <choice>Goalkeeper</choice>
+    </choices>
+  </question>
+  <question id="13">
+    <wording>What was Lev Yashin's nickname?</wording>
+    <choices>
+      <choice correct="yes">Black Spider</choice>
+      <choice>The Lion</choice>
+      <choice>The Chief</choice>
+      <choice>The Wall</choice>
+    </choices>
+  </question>
+  <question id="14">
+    <wording>Which country was George Best from?</wording>
+    <choices>
+      <choice correct="yes">Northern Ireland</choice>
+      <choice>Scotland</choice>
+      <choice>England</choice>
+      <choice>Wales</choice>
+    </choices>
+  </question>
+  <question id="15">
+    <wording>What was Garrincha's real name?</wording>
+    <choices>
+      <choice>Arthur Antunes Coimbra</choice>
+      <choice correct="yes">Manuel Francisco dos Santos</choice>
+      <choice>Edson Arantes do Nascimento</choice>
+      <choice>Carlos Alberto Torres</choice>
+    </choices>
+  </question>
+  <question id="16">
+    <wording>What nationality was Karl-Heinz Rummenigge?</wording>
+    <choices>
+      <choice correct="yes">German</choice>
+      <choice>Austrian</choice>
+      <choice>Swiss</choice>
+      <choice>Dutch</choice>
+    </choices>
+  </question>
+  <question id="17">
+    <wording>Which team did Sócrates play for most of his career in Brazil?</wording>
+    <choices>
+      <choice>Flamengo</choice>
+      <choice>Palmeiras</choice>
+      <choice correct="yes">Corinthians</choice>
+      <choice>Santos</choice>
+    </choices>
+  </question>
+  <question id="18">
+    <wording>What was Hugo Sánchez's nickname at Real Madrid?</wording>
+    <choices>
+      <choice>The Matador</choice>
+      <choice correct="yes">Hugol</choice>
+      <choice>The King</choice>
+      <choice>The Lynx</choice>
+    </choices>
+  </question>
+  <question id="19">
+    <wording>In which position did Paolo Rossi play?</wording>
+    <choices>
+      <choice correct="yes">Forward</choice>
+      <choice>Midfielder</choice>
+      <choice>Defender</choice>
+      <choice>Goalkeeper</choice>
+    </choices>
+  </question>
+  <question id="20">
+    <wording>What was Zinedine Zidane's nickname as a player?</wording>
+    <choices>
+      <choice correct="yes">Zizou</choice>
+      <choice>The Magician</choice>
+      <choice>The Panther</choice>
+      <choice>Le Petit Prince</choice>
+    </choices>
+  </question>
+</test>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Fútbol Clásico</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quiz de Fútbol Clásico</h1>
+      <select id="langSelector">
+        <option value="es" selected>Español</option>
+        <option value="en">English</option>
+      </select>
+    </header>
+    <main>
+      <div id="timer">00:00</div>
+      <div id="question-box">
+      </div>
+      <div class="nav-buttons">
+        <button id="prevBtn" disabled>Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+      </div>
+    </main>
+    <footer>
+      <div id="score">Puntuación: 0 / 0</div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
