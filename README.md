@@ -19,6 +19,7 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 - `index.html` - Página principal del cuestionario
 - `styles.css` - Hoja de estilos para la presentación
 - `script.js` - Funcionalidad JavaScript para la interactividad
+- `preguntas.dtd` - Asegura la validez de los XML de preguntas
 
 
 ## Actividades TEMA 4
