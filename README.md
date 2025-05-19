@@ -17,13 +17,13 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 
 | Ejercicio | Descripción |
 |-----------|-------------|
-| [Ejercicio 1](/Tema4/XML-Exercises/Ex1a.xml) | Creación de un documento XML básico sobre información personal |
-| [Ejercicio 2](/Tema4/XML-Exercises/Ex2.xml) | Desarrollo de DTD interno y externo para validar un catálogo de libros |
-| [Ejercicio 3](/Tema4/XML-Exercises/Ex3-corrected.xml) | Diseño de XML Schema para una biblioteca digital |
-| [Ejercicio 4](/Tema4/XML-Exercises/ex4.xml) | Transformación de XML a HTML usando XSLT para mostrar un menú de restaurante |
-| [Ejercicio 5](/Tema4/XML-Exercises/Ex5a.xml) | Validación de documentos XML usando diferentes esquemas y DTDs |
-| [Ejercicio 6](/Tema4/XML-Exercises/Ex6.xml) | Implementación de namespaces y procesamiento de XML con JavaScript |
-| [Ejercicio 7](/Tema4/XML-Exercises/ex7.txt) | Desarrollo de una aplicación web completa usando XML, XSLT y JavaScript |
+| [Ejercicio 1](/TEMA4/XML-EJERCICIOS/Ex1a.xml) | Creación de un documento XML básico sobre información personal |
+| [Ejercicio 2](/TEMA4/XML-EJERCICIOS/Ex2.xml) | Desarrollo de DTD interno y externo para validar un catálogo de libros |
+| [Ejercicio 3](/TEMA4/XML-EJERCICIOS/Ex3-corrected.xml) | Diseño de XML Schema para una biblioteca digital |
+| [Ejercicio 4](/TEMA4/XML-EJERCICIOS/ex4.xml) | Transformación de XML a HTML usando XSLT para mostrar un menú de restaurante |
+| [Ejercicio 5](/TEMA4/XML-EJERCICIOS/Ex5a.xml) | Validación de documentos XML usando diferentes esquemas y DTDs |
+| [Ejercicio 6](/TEMA4/XML-EJERCICIOS/Ex6.xml) | Implementación de namespaces y procesamiento de XML con JavaScript |
+| [Ejercicio 7](/TEMA4/XML-EJERCICIOS/ex7.txt) | Desarrollo de una aplicación web completa usando XML, XSLT y JavaScript |
 
 ## Ejercicios XML-DOM
 
