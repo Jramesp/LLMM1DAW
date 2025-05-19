@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Catálogo de CDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Estilos para la tabla HTML */
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Estilos para la tabla DIV */
+        .divTable {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .divTableRow {
+            display: table-row;
+        }
+
+        .divTableHeading {
+            display: table-header-group;
+            background-color: #f2f2f2;
+        }
+
+        .divTableCell,
+        .divTableHead {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .divTableHeading .divTableHead {
+            font-weight: bold;
+        }
+
+        .divTableBody {
+            display: table-row-group;
+        }
+
+        .divTableRow:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Catálogo de CDs</h1>
+
+    <h2>Tabla HTML</h2>
+    <table id="cdTable"></table>
+
+    <h2>Tabla DIV</h2>
+    <div id="cdDivTable"></div>
+
+    <script>
+        // Función para cargar el archivo XML
+        function loadXML() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                if (this.status == 200) {
+                    displayHTMLTable(this.responseXML);
+                    displayDIVTable(this.responseXML);
+                }
+            };
+            xhttp.open("GET", "https://www.w3schools.com/js/cd_catalog.xml");
+            xhttp.send();
+        }
+
+        // Función para mostrar los datos en una tabla HTML
+        function displayHTMLTable(xmlDoc) {
+            const cds = xmlDoc.getElementsByTagName("CD");
+            let table = "<tr><th>Título</th><th>Artista</th><th>País</th><th>Compañía</th><th>Precio</th><th>Año</th></tr>";
+
+            for (let i = 0; i < cds.length; i++) {
+                const title = cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+                const artist = cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+                const country = cds[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue;
+                const company = cds[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue;
+                const price = cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+                const year = cds[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+
+                table += "<tr>";
+                table += "<td>" + title + "</td>";
+                table += "<td>" + artist + "</td>";
+                table += "<td>" + country + "</td>";
+                table += "<td>" + company + "</td>";
+                table += "<td>" + price + "</td>";
+                table += "<td>" + year + "</td>";
+                table += "</tr>";
+            }
+
+            document.getElementById("cdTable").innerHTML = table;
+        }
+
+        // Función para mostrar los datos en una tabla DIV
+        function displayDIVTable(xmlDoc) {
+            const cds = xmlDoc.getElementsByTagName("CD");
+
+            // Crear estructura de la tabla DIV
+            let divTable = '<div class="divTable">';
+            divTable += '<div class="divTableHeading">';
+            divTable += '<div class="divTableRow">';
+            divTable += '<div class="divTableHead">Título</div>';
+            divTable += '<div class="divTableHead">Artista</div>';
+            divTable += '<div class="divTableHead">País</div>';
+            divTable += '<div class="divTableHead">Compañía</div>';
+            divTable += '<div class="divTableHead">Precio</div>';
+            divTable += '<div class="divTableHead">Año</div>';
+            divTable += '</div>';
+            divTable += '</div>';
+            divTable += '<div class="divTableBody">';
+
+            // Añadir filas con datos
+            for (let i = 0; i < cds.length; i++) {
+                const title = cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+                const artist = cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+                const country = cds[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue;
+                const company = cds[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue;
+                const price = cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+                const year = cds[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+
+                divTable += '<div class="divTableRow">';
+                divTable += '<div class="divTableCell">' + title + '</div>';
+                divTable += '<div class="divTableCell">' + artist + '</div>';
+                divTable += '<div class="divTableCell">' + country + '</div>';
+                divTable += '<div class="divTableCell">' + company + '</div>';
+                divTable += '<div class="divTableCell">' + price + '</div>';
+                divTable += '<div class="divTableCell">' + year + '</div>';
+                divTable += '</div>';
+            }
+
+            divTable += '</div>';
+            divTable += '</div>';
+
+            document.getElementById("cdDivTable").innerHTML = divTable;
+        }
+
+        // Cargar el XML al iniciar la página
+        window.onload = loadXML;
+    </script>
+</body>
+
+</html>

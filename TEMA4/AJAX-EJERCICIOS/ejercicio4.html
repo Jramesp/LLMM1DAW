@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - JSON Objeto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+        }
+        
+        .result {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .info-item {
+            margin-bottom: 10px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 4 - JSON Objeto</h1>
+    
+    <div class="result">
+        <h2>Información Básica</h2>
+        <div id="basicInfo"></div>
+    </div>
+    
+    <div class="result">
+        <h2>Mascotas</h2>
+        <div id="petsInfo"></div>
+    </div>
+    
+    <div class="result">
+        <h2>Todos los Datos en Párrafo</h2>
+        <div id="allDataParagraph"></div>
+    </div>
+    
+    <div class="result">
+        <h2>Todos los Datos en Tabla</h2>
+        <div id="allDataTable"></div>
+    </div>
+    
+    <script>
+        // Función para cargar el archivo JSON
+        function loadJSON() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    const jsonObj = JSON.parse(this.responseText);
+                    displayBasicInfo(jsonObj);
+                    displayPetsInfo(jsonObj);
+                    displayAllDataParagraph(jsonObj);
+                    displayAllDataTable(jsonObj);
+                }
+            };
+            xhttp.open("GET", "datos/json_demo.txt");
+            xhttp.send();
+        }
+        
+        // Función para mostrar información básica
+        function displayBasicInfo(jsonObj) {
+            let html = "";
+            
+            html += `<div class="info-item">
+                <span class="info-label">Edad:</span> ${jsonObj.age}
+            </div>`;
+            
+            html += `<div class="info-item">
+                <span class="info-label">Tipo de animal de la primera mascota:</span> ${jsonObj.pets[0].animal}
+            </div>`;
+            
+            html += `<div class="info-item">
+                <span class="info-label">Nombre de la primera mascota:</span> ${jsonObj.pets[0].name}
+            </div>`;
+            
+            html += `<div class="info-item">
+                <span class="info-label">Número de mascotas:</span> ${jsonObj.pets.length}
+            </div>`;
+            
+            document.getElementById("basicInfo").innerHTML = html;
+        }
+        
+        // Función para mostrar información de mascotas
+        function displayPetsInfo(jsonObj) {
+            let html = "<h3>Nombres de todas las mascotas:</h3>";
+            
+            for (let i = 0; i < jsonObj.pets.length; i++) {
+                html += `<div class="info-item">${i + 1}. ${jsonObj.pets[i].name}</div>`;
+            }
+            
+            document.getElementById("petsInfo").innerHTML = html;
+        }
+        
+        // Función para mostrar todos los datos en un párrafo
+        function displayAllDataParagraph(jsonObj) {
+            let html = `<p>Nombre: ${jsonObj.name}, Edad: ${jsonObj.age}, Ciudad: ${jsonObj.city}. Mascotas: `;
+            
+            for (let i = 0; i < jsonObj.pets.length; i++) {
+                const pet = jsonObj.pets[i];
+                html += `${pet.name} (${pet.animal})`;
+                
+                if (i < jsonObj.pets.length - 1) {
+                    html += ", ";
+                }
+            }
+            
+            html += ".</p>";
+            
+            document.getElementById("allDataParagraph").innerHTML = html;
+        }
+        
+        // Función para mostrar todos los datos en una tabla
+        function displayAllDataTable(jsonObj) {
+            let html = `
+                <table>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>${jsonObj.name}</td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td>${jsonObj.age}</td>
+                    </tr>
+                    <tr>
+                        <td>Ciudad</td>
+                        <td>${jsonObj.city}</td>
+                    </tr>
+                </table>
+                
+                <h3>Mascotas</h3>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Animal</th>
+                    </tr>
+            `;
+            
+            for (let i = 0; i < jsonObj.pets.length; i++) {
+                const pet = jsonObj.pets[i];
+                html += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${pet.name}</td>
+                        <td>${pet.animal}</td>
+                    </tr>
+                `;
+            }
+            
+            html += "</table>";
+            
+            document.getElementById("allDataTable").innerHTML = html;
+        }
+        
+        // Cargar el JSON al iniciar la página
+        window.onload = loadJSON;
+    </script>
+</body>
+</html>

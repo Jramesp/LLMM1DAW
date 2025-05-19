@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - NASA API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1, h2 {
+            color: #0b3d91; /* Color azul NASA */
+        }
+        
+        .nasa-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nasa-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .nasa-explanation {
+            background-color: #e9f7fe;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .nasa-date {
+            font-weight: bold;
+            color: #0b3d91;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .nasa-url {
+            word-break: break-all;
+            margin-bottom: 20px;
+        }
+        
+        .nasa-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #0b3d91;
+        }
+        
+        .date-selector {
+            margin: 20px 0;
+        }
+        
+        input[type="date"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        
+        button {
+            padding: 8px 15px;
+            background-color: #0b3d91;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #061f4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>NASA - Astronomy Picture of the Day</h1>
+    
+    <div class="date-selector">
+        <label for="apodDate">Selecciona una fecha:</label>
+        <input type="date" id="apodDate" value="2025-05-12" min="1995-06-16" max="2025-05-12">
+        <button onclick="loadNASAData()">Buscar</button>
+    </div>
+    
+    <div id="nasaData" class="nasa-container">
+        <p>Cargando datos de la NASA...</p>
+    </div>
+    
+    <script>
+        // Función para cargar datos de la API de la NASA
+        function loadNASAData() {
+            const date = document.getElementById("apodDate").value || "2020-05-01";
+            const apiKey = "DEMO_KEY"; // Usar DEMO_KEY para pruebas limitadas
+            const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+            
+            document.getElementById("nasaData").innerHTML = "<p>Cargando datos de la NASA...</p>";
+            
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    const nasaData = JSON.parse(this.responseText);
+                    displayNASAData(nasaData);
+                } else {
+                    document.getElementById("nasaData").innerHTML = 
+                        "<p>Error al cargar los datos. Por favor, inténtalo de nuevo más tarde.</p>";
+                }
+            };
+            
+            xhttp.onerror = function() {
+                document.getElementById("nasaData").innerHTML = 
+                    "<p>Error al cargar los datos. Por favor, inténtalo de nuevo más tarde.</p>";
+            };
+            
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+        
+        // Función para mostrar los datos de la NASA
+        function displayNASAData(data) {
+            let html = "";
+            
+            // Título
+            html += `<div class="nasa-title">${data.title}</div>`;
+            
+            // Fecha
+            html += `<div class="nasa-date">Fecha: ${data.date}</div>`;
+            
+            // Imagen
+            if (data.media_type === "image") {
+                html += `<img src="${data.url}" alt="${data.title}" class="nasa-image">`;
+            } else if (data.media_type === "video") {
+                html += `<iframe width="100%" height="400" src="${data.url}" frameborder="0" allowfullscreen class="nasa-image"></iframe>`;
+            }
+            
+            // URL
+            html += `<div class="nasa-url">URL: ${data.url}</div>`;
+            
+            // Explicación
+            html += `<div class="nasa-explanation">${data.explanation}</div>`;
+            
+            // Actualizar el contenido
+            document.getElementById("nasaData").innerHTML = html;
+        }
+        
+        // Cargar los datos al iniciar la página
+        window.onload = loadNASAData;
+    </script>
+</body>
+</html>

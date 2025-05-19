@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Información Meteorológica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        .weather-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .weather-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .weather-day {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 20px;
+        }
+        
+        .weather-day:last-child {
+            border-bottom: none;
+        }
+        
+        .temperature {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .sky-state {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e9f7fe;
+            border-radius: 5px;
+        }
+        
+        .wind-info, .humidity-info {
+            margin: 10px 0;
+        }
+        
+        select {
+            padding: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        button {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Información Meteorológica</h1>
+        
+        <div>
+            <h3>Selecciona una localidad:</h3>
+            <select id="localidadSelect">
+                <option value="21041">Huelva (capital)</option>
+                <option value="21002">Aljaraque</option>
+                <option value="21021">Cartaya</option>
+                <option value="21042">Isla Cristina</option>
+                <option value="21044">Lepe</option>
+                <option value="21005">Almonte</option>
+            </select>
+            <button onclick="cargarDatosMeteorologicos()">Cargar datos</button>
+        </div>
+        
+        <div id="weatherInfo" class="weather-info">
+            <p>Selecciona una localidad para ver la información meteorológica.</p>
+        </div>
+    </div>
+    
+    <script>
+        function cargarDatosMeteorologicos() {
+            const codigoINE = document.getElementById("localidadSelect").value;
+            const url = `datos/localidad_${codigoINE}.xml`;
+            
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    procesarDatosMeteorologicos(this.responseXML, codigoINE);
+                } else {
+                    document.getElementById("weatherInfo").innerHTML = 
+                        "<p>Error al cargar los datos. Por favor, verifica que el archivo exista en la carpeta 'datos'.</p>";
+                }
+            };
+            
+            xhttp.onerror = function() {
+                document.getElementById("weatherInfo").innerHTML = 
+                    "<p>Error al cargar los datos. Asegúrate de que el archivo XML existe en la carpeta 'datos'.</p>";
+            };
+            
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+        
+        function procesarDatosMeteorologicos(xmlDoc, codigoINE) {
+            try {
+                // Obtener nombre de la localidad
+                const nombreLocalidad = xmlDoc.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                
+                // Obtener datos de predicción
+                const prediccion = xmlDoc.getElementsByTagName("prediccion")[0];
+                const dias = prediccion.getElementsByTagName("dia");
+                
+                let htmlContent = `<h2>Predicción para ${nombreLocalidad}</h2>`;
+                
+                // Procesar cada día
+                for (let i = 0; i < dias.length; i++) {
+                    const dia = dias[i];
+                    const fecha = dia.getAttribute("fecha");
+                    
+                    // Temperaturas
+                    const tempMax = dia.getElementsByTagName("temperatura")[0].getElementsByTagName("maxima")[0].childNodes[0].nodeValue;
+                    const tempMin = dia.getElementsByTagName("temperatura")[0].getElementsByTagName("minima")[0].childNodes[0].nodeValue;
+                    
+                    // Estado del cielo por tramos
+                    const estadoCielo = dia.getElementsByTagName("estado_cielo");
+                    let estadoCieloHTML = "<div class='sky-state'><h4>Estado del cielo:</h4>";
+                    
+                    for (let j = 0; j < estadoCielo.length; j++) {
+                        const periodo = estadoCielo[j].getAttribute("periodo");
+                        const descripcion = estadoCielo[j].getAttribute("descripcion");
+                        
+                        if (periodo && descripcion) {
+                            estadoCieloHTML += `<p>Periodo ${periodo}: ${descripcion}</p>`;
+                        }
+                    }
+                    estadoCieloHTML += "</div>";
+                    
+                    // Viento
+                    const viento = dia.getElementsByTagName("viento");
+                    let vientoHTML = "<div class='wind-info'><h4>Viento:</h4>";
+                    
+                    for (let j = 0; j < viento.length; j++) {
+                        const periodo = viento[j].getAttribute("periodo");
+                        const direccion = viento[j].getElementsByTagName("direccion")[0].childNodes[0].nodeValue;
+                        const velocidad = viento[j].getElementsByTagName("velocidad")[0].childNodes[0].nodeValue;
+                        
+                        if (periodo) {
+                            vientoHTML += `<p>Periodo ${periodo}: Dirección ${direccion}, Velocidad ${velocidad} km/h</p>`;
+                        } else {
+                            vientoHTML += `<p>Dirección ${direccion}, Velocidad ${velocidad} km/h</p>`;
+                        }
+                    }
+                    vientoHTML += "</div>";
+                    
+                    // Humedad relativa
+                    const humedadRelativa = dia.getElementsByTagName("humedad_relativa")[0];
+                    const humedadMax = humedadRelativa.getElementsByTagName("maxima")[0].childNodes[0].nodeValue;
+                    const humedadMin = humedadRelativa.getElementsByTagName("minima")[0].childNodes[0].nodeValue;
+                    
+                    // Construir HTML para el día
+                    htmlContent += `
+                        <div class="weather-day">
+                            <h3>Fecha: ${fecha}</h3>
+                            <div class="temperature">
+                                <p>Temperatura máxima: ${tempMax}°C</p>
+                                <p>Temperatura mínima: ${tempMin}°C</p>
+                            </div>
+                            ${estadoCieloHTML}
+                            ${vientoHTML}
+                            <div class="humidity-info">
+                                <h4>Humedad relativa:</h4>
+                                <p>Máxima: ${humedadMax}%</p>
+                                <p>Mínima: ${humedadMin}%</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                document.getElementById("weatherInfo").innerHTML = htmlContent;
+                
+            } catch (error) {
+                document.getElementById("weatherInfo").innerHTML = 
+                    `<p>Error al procesar los datos: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

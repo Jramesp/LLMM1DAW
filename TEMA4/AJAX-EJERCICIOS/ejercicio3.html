@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - JSON Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+        }
+        
+        .result {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 3 - JSON Array</h1>
+    
+    <div class="result">
+        <h2>Longitud del Array</h2>
+        <div id="arrayLength"></div>
+    </div>
+    
+    <div class="result">
+        <h2>Elementos en Tabla</h2>
+        <table id="arrayTable"></table>
+    </div>
+    
+    <script>
+        // Función para cargar el archivo JSON
+        function loadJSON() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    const jsonArray = JSON.parse(this.responseText);
+                    displayArrayLength(jsonArray);
+                    displayArrayTable(jsonArray);
+                }
+            };
+            xhttp.open("GET", "datos/json_demo_array.txt");
+            xhttp.send();
+        }
+        
+        // Función para mostrar la longitud del array
+        function displayArrayLength(jsonArray) {
+            document.getElementById("arrayLength").innerHTML = 
+                `<p>El array contiene <strong>${jsonArray.length}</strong> elementos.</p>`;
+        }
+        
+        // Función para mostrar los elementos en una tabla
+        function displayArrayTable(jsonArray) {
+            let tableHTML = "<tr><th>#</th><th>Marca</th></tr>";
+            
+            for (let i = 0; i < jsonArray.length; i++) {
+                tableHTML += `<tr><td>${i + 1}</td><td>${jsonArray[i]}</td></tr>`;
+            }
+            
+            document.getElementById("arrayTable").innerHTML = tableHTML;
+        }
+        
+        // Cargar el JSON al iniciar la página
+        window.onload = loadJSON;
+    </script>
+</body>
+</html>
