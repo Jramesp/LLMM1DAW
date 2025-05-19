@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - XML DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .result {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-left: 3px solid #28a745;
+        }
+        h2 {
+            color: #28a745;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 2 - Catálogo de CDs</h1>
+    
+    <h2>Títulos de los CDs</h2>
+    <div id="titulos" class="result"></div>
+    
+    <h2>Precios de los CDs</h2>
+    <div id="precios" class="result"></div>
+    
+    <h2>Compañías de los CDs</h2>
+    <div id="companias" class="result"></div>
+    
+    <h2>Tabla completa (Título, Artista y Precio)</h2>
+    <div id="tabla" class="result"></div>
+    
+    <script>
+        // Función para cargar el archivo XML
+        function loadXML() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    mostrarTitulos(this.responseXML);
+                    mostrarPrecios(this.responseXML);
+                    mostrarCompanias(this.responseXML);
+                    mostrarTabla(this.responseXML);
+                }
+            };
+            xhttp.open("GET", "datos/cd_catalog.xml");
+            xhttp.send();
+        }
+        
+        // Función para mostrar los títulos
+        function mostrarTitulos(xmlDoc) {
+            let titulos = "";
+            const n = xmlDoc.getElementsByTagName("TITLE").length;
+            for(let i = 0; i < n; i++) {
+                titulos += xmlDoc.getElementsByTagName("TITLE")[i].childNodes[0].nodeValue + "<br>";
+            }
+            document.getElementById("titulos").innerHTML = titulos;
+        }
+        
+        // Función para mostrar los precios
+        function mostrarPrecios(xmlDoc) {
+            let precios = "";
+            const n = xmlDoc.getElementsByTagName("PRICE").length;
+            for(let i = 0; i < n; i++) {
+                precios += xmlDoc.getElementsByTagName("PRICE")[i].childNodes[0].nodeValue + "€<br>";
+            }
+            document.getElementById("precios").innerHTML = precios;
+        }
+        
+        // Función para mostrar las compañías
+        function mostrarCompanias(xmlDoc) {
+            let companias = "";
+            const n = xmlDoc.getElementsByTagName("COMPANY").length;
+            for(let i = 0; i < n; i++) {
+                companias += xmlDoc.getElementsByTagName("COMPANY")[i].childNodes[0].nodeValue + "<br>";
+            }
+            document.getElementById("companias").innerHTML = companias;
+        }
+        
+        // Función para mostrar la tabla completa
+        function mostrarTabla(xmlDoc) {
+            const cds = xmlDoc.getElementsByTagName("CD");
+            let tabla = "<table><tr><th>Título</th><th>Artista</th><th>Precio</th></tr>";
+            
+            for (let i = 0; i < cds.length; i++) {
+                const titulo = cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+                const artista = cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+                const precio = cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+                
+                tabla += `<tr>
+                    <td>${titulo}</td>
+                    <td>${artista}</td>
+                    <td>${precio}€</td>
+                </tr>`;
+            }
+            
+            tabla += "</table>";
+            document.getElementById("tabla").innerHTML = tabla;
+        }
+        
+        // Cargar el XML al iniciar la página
+        window.onload = loadXML;
+    </script>
+</body>
+</html>
