@@ -9,7 +9,7 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 - Soporte bilingüe (español e inglés)
 - Temporizador para contabilizar el tiempo empleado
 - Cálculo y visualización de puntuación
------------|--------------
+
 
 <a href="http://127.0.0.1:5500/index.html" target="_blank">Enlace del proyecto XML</a>
 
