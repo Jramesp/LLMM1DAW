@@ -10,7 +10,13 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 - Temporizador para contabilizar el tiempo empleado
 - Cálculo y visualización de puntuación
 -----------|--------------
-http://127.0.0.1:5500/index.html
+
+<a href="http://127.0.0.1:5500/index.html" target="_blank">Enlace del proyecto XML</a>
+
+## Actividades
+
+| Ejercicio | Descripción |
+|-----------|-------------|
 # Proyecto Final 2EVA
 ### Práctica Bootstrap
 Ejercicio  | Descripción
