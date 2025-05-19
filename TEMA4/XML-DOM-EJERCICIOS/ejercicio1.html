@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - XML DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .result {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 3px solid #007bff;
+        }
+        h3 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1 - Manipulación de XML con DOM</h1>
+    <p>Consultas al archivo books.xml de W3Schools</p>
+
+    <div id="results"></div>
+
+    <script>
+        // Función para cargar el archivo XML
+        function loadXML() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    processXML(this.responseXML);
+                }
+            };
+            xhttp.open("GET", "datos/books.xml");
+            xhttp.send();
+        }
+
+        // Función para procesar el XML y mostrar los resultados
+        function processXML(xmlDoc) {
+            let results = document.getElementById("results");
+            let html = "";
+
+            // Título del primer libro
+            html += createResultBlock("Título del primer libro", 
+                xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+
+            // Año del primer libro
+            html += createResultBlock("Año del primer libro", 
+                xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue);
+
+            // Precio del segundo libro
+            html += createResultBlock("Precio del segundo libro", 
+                xmlDoc.getElementsByTagName("price")[1].childNodes[0].nodeValue);
+
+            // Autor del primer libro
+            html += createResultBlock("Autor del primer libro", 
+                xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue);
+
+            // Primer autor del tercer libro
+            html += createResultBlock("Primer autor del tercer libro", 
+                xmlDoc.getElementsByTagName("book")[2].getElementsByTagName('author')[0].childNodes[0].nodeValue);
+
+            // Segundo autor del tercer libro
+            html += createResultBlock("Segundo autor del tercer libro", 
+                xmlDoc.getElementsByTagName("book")[2].getElementsByTagName('author')[1].childNodes[0].nodeValue);
+
+            // Nombre del primer atributo del primer libro
+            html += createResultBlock("Nombre del primer atributo del primer libro", 
+                xmlDoc.getElementsByTagName("book")[0].attributes[0].nodeName);
+
+            // Valor del primer atributo del primer libro
+            html += createResultBlock("Valor del primer atributo del primer libro", 
+                xmlDoc.getElementsByTagName("book")[0].attributes[0].nodeValue);
+
+            // Número de autores del tercer libro
+            html += createResultBlock("Número de autores del tercer libro", 
+                xmlDoc.getElementsByTagName("book")[2].getElementsByTagName('author').length);
+
+            // Mostrar todos los autores del tercer libro
+            let autoresHTML = "";
+            let autores = xmlDoc.getElementsByTagName("book")[2].getElementsByTagName('author');
+            for(let i = 0; i < autores.length; i++) {
+                autoresHTML += autores[i].childNodes[0].nodeValue + "<br>";
+            }
+            html += createResultBlock("Todos los autores del tercer libro", autoresHTML);
+
+            // Mostrar el número de atributos del cuarto libro
+            html += createResultBlock("Número de atributos del cuarto libro", 
+                xmlDoc.getElementsByTagName("book")[3].attributes.length);
+
+            // Mostrar el valor de los atributos del cuarto libro
+            let atributosHTML = "";
+            let atributos = xmlDoc.getElementsByTagName("book")[3].attributes;
+            for(let i = 0; i < atributos.length; i++) {
+                atributosHTML += atributos[i].nodeName + ": " + atributos[i].nodeValue + "<br>";
+            }
+            html += createResultBlock("Valor de los atributos del cuarto libro", atributosHTML);
+
+            results.innerHTML = html;
+        }
+
+        // Función para crear un bloque de resultado
+        function createResultBlock(title, content) {
+            return `
+                <h3>${title}</h3>
+                <div class="result">${content}</div>
+            `;
+        }
+
+        // Cargar el XML al iniciar la página
+        window.onload = loadXML;
+    </script>
+</body>
+</html>
