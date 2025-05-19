@@ -13,10 +13,36 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 
 <a href="http://127.0.0.1:5500/index.html" target="_blank">Enlace del proyecto XML</a>
 
-## Actividades
+## Actividades TEMA 4
 
 | Ejercicio | Descripción |
 |-----------|-------------|
+| [Ejercicio 1](/Tema4/XML-Exercises/Ex1a.xml) | Creación de un documento XML básico sobre información personal |
+| [Ejercicio 2](/Tema4/XML-Exercises/Ex2.xml) | Desarrollo de DTD interno y externo para validar un catálogo de libros |
+| [Ejercicio 3](/Tema4/XML-Exercises/Ex3-corrected.xml) | Diseño de XML Schema para una biblioteca digital |
+| [Ejercicio 4](/Tema4/XML-Exercises/ex4.xml) | Transformación de XML a HTML usando XSLT para mostrar un menú de restaurante |
+| [Ejercicio 5](/Tema4/XML-Exercises/Ex5a.xml) | Validación de documentos XML usando diferentes esquemas y DTDs |
+| [Ejercicio 6](/Tema4/XML-Exercises/Ex6.xml) | Implementación de namespaces y procesamiento de XML con JavaScript |
+| [Ejercicio 7](/Tema4/XML-Exercises/ex7.txt) | Desarrollo de una aplicación web completa usando XML, XSLT y JavaScript |
+
+## Ejercicios XML-DOM
+
+| Ejercicio | Descripción |
+|-----------|-------------|
+| [Ejercicio 1](/Tema4/XML-DOM/ejercicio1.html) | Consultas básicas al DOM de un documento XML de libros (books.xml) |
+| [Ejercicio 2](/Tema4/XML-DOM/ejercicio2.html) | Manipulación de un catálogo de CDs (cd_catalog.xml) usando XMLHttpRequest |
+| [Ejercicio 3](/Tema4/XML-DOM/ejercicio3.html) | Creación de una tabla con información de libros usando DOM y XMLHttpRequest |
+
+## Ejercicios AJAX
+
+| Ejercicio | Descripción |
+|-----------|-------------|
+| [Ejercicio 1](/Tema4/AJAX-EXERCISES/ejercicio1.html) | Visualización de información de CDs usando AJAX y cd_catalog.xml |
+| [Ejercicio 2](/Tema4/AJAX-EXERCISES/ejercicio2.html) | Consulta de información meteorológica de AEMET para localidades de Huelva |
+| [Ejercicio 3](/Tema4/AJAX-EXERCISES/ejercicio3.html) | Manipulación de arrays JSON con AJAX |
+| [Ejercicio 4](/Tema4/AJAX-EXERCISES/ejercicio4.html) | Procesamiento de objetos JSON complejos con mascotas |
+| [Ejercicio 5](/Tema4/AJAX-EXERCISES/ejercicio5.html) | Consumo de la API de la NASA para mostrar la imagen astronómica del día |
+
 # Proyecto Final 2EVA
 ### Práctica Bootstrap
 Ejercicio  | Descripción
