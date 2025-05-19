@@ -1,4 +1,16 @@
 # Proyecto Final 2EVA
+## Proyecto XML - Cuestionario Interactivo
+
+Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD, JavaScript y DOM.
+
+### Características principales:
+- Visualización de preguntas en formato de presentación
+- Documentos XML validados con DTD
+- Soporte bilingüe (español e inglés)
+- Temporizador para contabilizar el tiempo empleado
+- Cálculo y visualización de puntuación
+-----------|--------------
+http://127.0.0.1:5500/index.html
 # Proyecto Final 2EVA
 ### Práctica Bootstrap
 Ejercicio  | Descripción
