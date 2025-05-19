@@ -1,0 +1,13 @@
+Errores encontrados en el archivo XML:
+
+1. Error: Etiquetas mal anidadas para president y extension
+   Corrección: Separar las etiquetas correctamente
+
+2. Error: Etiquetas mal anidadas para secretary y extension
+   Corrección: Separar las etiquetas correctamente
+
+3. Error: Estructura incorrecta - president, secretary y extension deberían estar dentro de company
+   Corrección: Mover estos elementos dentro de su respectiva etiqueta company
+
+4. Error: Texto mezclado con etiquetas sin estructura clara
+   Corrección: Asegurar que cada elemento tenga su propio contenido bien definido

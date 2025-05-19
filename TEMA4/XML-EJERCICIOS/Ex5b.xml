@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDList>
+  <!-- This CD has more tracks than in this file -->
+  <CD serial="B6B41B" disc-length="36:55">
+    <name>Thriller</name>
+    <artist>Michael Jackson</artist>
+    <year>1982</year>
+    <category>Pop</category>
+    <tracks>
+      <track number="1" duration="6:03">
+        <title>Wanna Be Startin' Somethin'</title>
+      </track>
+      <track number="2" duration="4:20">
+        <title>Baby Be Mine</title>
+      </track>
+      <track number="3" duration="3:42">
+        <title>The Girl Is Mine</title>
+      </track>
+      <track number="4" duration="5:57">
+        <title>Thriller</title>
+      </track>
+    </tracks>
+  </CD>
+  <CD serial="A7C52D" disc-length="42:11">
+    <name>Back in Black</name>
+    <artist>AC/DC</artist>
+    <year>1980</year>
+    <category>Rock</category>
+    <tracks>
+      <track number="1" duration="5:12">
+        <title>Hells Bells</title>
+      </track>
+      <track number="2" duration="5:17">
+        <title>Shoot to Thrill</title>
+      </track>
+      <track number="3" duration="4:15">
+        <title>Back in Black</title>
+      </track>
+    </tracks>
+  </CD>
+</CDList>

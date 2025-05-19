@@ -1,0 +1,9 @@
+- ¿Cómo se ven los comentarios en XML? (sección 2.5)
+
+- Los comentarios en XML comienzan con <!-- y terminan con --> . El texto dentro de estos delimitadores es ignorado por el procesador XML. Los comentarios no pueden contener la secuencia -- dentro de ellos.
+- ¿Puede repetirse un atributo en el mismo elemento? (sección 3.1)
+
+- No, un atributo no puede repetirse en el mismo elemento. Los nombres de los atributos deben ser únicos dentro de un elemento.
+- ¿Dónde se establece que los nombres de elementos en las etiquetas de apertura y cierre deben coincidir?
+
+- Esto se establece en la sección 3.1 del estándar XML 1.0, donde se define que el nombre en la etiqueta de inicio debe coincidir exactamente con el nombre en la etiqueta de cierre correspondiente.

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter>
+  <sender>
+    <name>Juan Pérez</name>
+    <address>
+      <street>Calle Principal 123</street>
+      <city>Madrid</city>
+      <postalCode>28001</postalCode>
+      <country>España</country>
+    </address>
+    <email>juan.perez@ejemplo.com</email>
+    <phone>+34 612 345 678</phone>
+  </sender>
+  <recipient>
+    <name>María García</name>
+    <address>
+      <street>Avenida Central 456</street>
+      <city>Barcelona</city>
+      <postalCode>08001</postalCode>
+      <country>España</country>
+    </address>
+  </recipient>
+  <date>2023-05-15</date>
+  <subject>Invitación a conferencia</subject>
+  <body>
+    <salutation>Estimada Sra. García:</salutation>
+    <paragraph>Me complace invitarle a la conferencia anual de tecnología que se celebrará el próximo mes en Madrid.</paragraph>
+    <paragraph>El evento tendrá lugar los días 10 y 11 de junio en el Centro de Convenciones. Adjunto encontrará el programa completo y la información de registro.</paragraph>
+    <paragraph>Esperamos contar con su valiosa presencia.</paragraph>
+    <closing>Atentamente,</closing>
+  </body>
+  <signature>
+    <name>Juan Pérez</name>
+    <title>Director de Eventos</title>
+    <company>TechConf España</company>
+  </signature>
+</letter>
