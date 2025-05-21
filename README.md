@@ -11,7 +11,7 @@ Este proyecto consiste en un cuestionario interactivo desarrollado con XML, DTD,
 - Cálculo y visualización de puntuación
 
 
-<a href="http://127.0.0.1:5500/index.html" target="_blank">Enlace del proyecto XML</a>
+<a href="https://jramesp.github.io/ProyectoXML.github.io/" target="_blank">Enlace del proyecto XML</a>
 ### Archivos del proyecto XML:
 |[Enlace a los archivos del proyecto XML](TEMA4/ProyectoXML) |
 - `preguntas_es.xml` - Preguntas en español (20 preguntas con 4 opciones cada una)
